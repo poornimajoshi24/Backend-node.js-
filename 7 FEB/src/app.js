@@ -28,6 +28,10 @@ app.delete("/notes/:index", (req, res) => {
   delete notes[req.params.index];
   res.send("note deleted");
 });
-
+//STEP 11 API 4 update the only description part of a particular note
+app.patch("/notes/:index", (req, res) => {
+  notes[req.params.index].description = req.body.description;
+  res.send("note updated");
+});
 
 module.exports = app; //step2- export the app to use in server.js
