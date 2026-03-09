@@ -27,5 +27,11 @@ app.delete("/notes/:mama", (req, res) => {
   });
 });
 
+app.patch("/notes/:index",(req,res)=>{
+    notes[req.params.index]=req.body.description
+    res.status(200).json({
+        message:"note updated successfully"
+    })
+})
 
 module.exports = app;
