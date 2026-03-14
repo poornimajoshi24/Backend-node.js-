@@ -1,5 +1,6 @@
 // server  ko start aur database se connect karta hai
 const app = require("./src/app");
+const connectTODb=require("./src/config/database");
 const mongoose = require("mongoose");
 function connectTODb() {
   mongoose
